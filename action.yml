@@ -1,0 +1,19 @@
+name: 'Prune DOCR Tags'
+description: 'Prune DigitalOcean Container Registry Tags'
+author: 'Marius Craciunoiu'
+
+inputs:
+  reposistory:
+    description: Repository name
+
+  keep:
+    description: Number of tags to keep
+    default: 10
+
+runs:
+  using: 'node14'
+  main: 'dist/index.js'
+
+branding:
+  icon: trash-2
+  color: green
